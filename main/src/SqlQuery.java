@@ -5,12 +5,12 @@ package src;
 * */
 public enum SqlQuery {
     // Enum constants
-    GET_APPLIANCE_BY_ID("SELECT * FROM appliance WHERE id = ?"),
-    GET_APPLIANCE_BY_NAME("SELECT * FROM appliance WHERE name = ?"),
-    GET_ALL_APPLIANCES("SELECT * FROM appliance"),
-    INSERT_APPLIANCE("INSERT INTO appliance (name, type, status, usage_time) VALUES (?, ?, ?, ?)"),
-    UPDATE_APPLIANCE("UPDATE appliance SET name = ?, type = ?, status = ?, usage_time = ? WHERE id = ?"),
-    DELETE_APPLIANCE("DELETE FROM appliance WHERE id = ?");
+    GET_APPLIANCE_BY_ID("SELECT * FROM appliances WHERE id = ?"),
+    GET_APPLIANCE_BY_NAME("SELECT * FROM appliances WHERE name = ?"),
+    GET_ALL_APPLIANCES("SELECT * FROM appliances"),
+    INSERT_APPLIANCE("INSERT INTO appliances (name, type, status, usage_time) VALUES (?, ?, ?, ?)"),
+    UPDATE_APPLIANCE("UPDATE appliances SET name = ?, type = ?, status = ?, usage_time = ? WHERE id = ?"),
+    DELETE_APPLIANCE("DELETE FROM appliances WHERE id = ?");
 
     // Attribute
     private final String query;

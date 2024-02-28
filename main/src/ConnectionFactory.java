@@ -20,11 +20,6 @@ public class ConnectionFactory {
         try {
             // Build the connection string, and get a connection
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            if (conn != null) {
-                System.out.println("Connected to the database!");
-            } else {
-                System.out.println("Failed to make connection!");
-            }
         } catch (SQLException ex) {
             System.err.format("SQL State: %s\n%s", ex.getSQLState(), ex.getMessage());
         } catch (Exception e) {
@@ -33,14 +28,32 @@ public class ConnectionFactory {
         return conn; // Return the connection object
 
     }
+
+    /**
+     * Print a message indicating that the connection is established.
+     */
+    public static void printConnectionMessage() {
+        try (Connection conn = getConnection()) {
+            if (conn != null) {
+                System.out.println("Connected to the database!");
+            } else {
+                System.out.println("Failed to make connection!");
+            }
+        } catch (SQLException e) {
+            System.err.println("Error checking connection status: " + e.getMessage());
+        }
+    }
+
+
+
     /**
      * Test the connection
-     * */
+     *
 
     public static void main (String[]args){
         Connection connection = getConnection();
 
 
     }
-
+*/
 }
