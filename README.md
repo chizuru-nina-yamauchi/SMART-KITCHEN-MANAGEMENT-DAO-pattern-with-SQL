@@ -58,6 +58,7 @@ The goal of this assignment is to develop a Java application that interacts with
     
 Good luck, and have fun building your Smart Kitchen Management System!
 
+---
 
 ### How to set up the PostgreSQL database and create the required table
 
